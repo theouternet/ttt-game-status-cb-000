@@ -54,7 +54,7 @@ def over?(board)
     return true
     elsif full?(board) == true
     return true
-    elsif winner(board) == ("X" || "O") && full?(board) == false
+    elsif won(board) == true && full?(board) == false
     return true
   end
 end
