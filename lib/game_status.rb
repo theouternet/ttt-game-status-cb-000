@@ -48,14 +48,10 @@ def draw?(board)
 end
 
 def over?(board)
-  if winner(board) == ("X" || "O")
+  if won?(board) || full?(board) || draw?(board)
     return true
-    elsif draw?(board) == true
-    return true
-    elsif full?(board) == true
-    return true
-    elsif won(board) == true && full?(board) == false
-    return true
+  else
+    return false
   end
 end
     
