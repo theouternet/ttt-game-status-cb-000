@@ -37,7 +37,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.none?{|space| space == " "}
+  board.all? {|index| index == "X" || index == "O"}
 end
 
 def draw?(board)
